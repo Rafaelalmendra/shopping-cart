@@ -1,9 +1,9 @@
 import CourseCard from "./CourseCard";
-import { Main } from './style';
-
 import { courses } from "../../database";
 
-const Courses = ({ handleAddToCart }) => {
+import { Main } from './style';
+
+const Courses = () => {
   return (
     <Main>
       <section>
@@ -13,7 +13,6 @@ const Courses = ({ handleAddToCart }) => {
             img={course.img}
             price={course.price}
             name={course.name}
-            handleAddToCart={handleAddToCart}
           />
         ))}
       </section>

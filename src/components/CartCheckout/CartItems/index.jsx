@@ -1,6 +1,11 @@
+import { useContext } from 'react';
+import { CartContext } from '../../../contexts/CartContext';
+
 import { Li } from '../style';
 
-const CartItems = ({ name, price, itemIndex, handleRemoveToCart }) => {
+const CartItems = ({ name, price, itemIndex }) => {
+  const { handleRemoveToCart } = useContext(CartContext);
+
   return (
     <Li>
       <h2>{name}</h2>

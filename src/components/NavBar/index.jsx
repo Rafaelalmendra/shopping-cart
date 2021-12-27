@@ -1,6 +1,9 @@
+import { useContext } from 'react';
+import { CartContext } from '../../contexts/CartContext';
 import { Header } from './style';
 
-const Navbar = ({ cart, clearCart }) => {
+const Navbar = () => {
+  const { cart, clearCart } = useContext(CartContext);
   const totalPrice = cart.reduce((acc, current) => acc + current.price, 0);
 
   return (

@@ -1,6 +1,11 @@
+import { useContext } from 'react';
+import { CartContext } from '../../../contexts/CartContext';
+
 import { Card } from '../style';
 
-const CourseCard = ({ id, img, name, price, handleAddToCart }) => {
+const CourseCard = ({ id, img, name, price }) => {
+  const { handleAddToCart } = useContext(CartContext);
+
   return (
     <Card key={id}>
       {/* eslint-disable-next-line @next/next/no-img-element*/}
