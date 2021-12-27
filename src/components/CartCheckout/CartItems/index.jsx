@@ -1,11 +1,11 @@
 import { Li } from '../style';
 
-const CartItems = () => {
+const CartItems = ({ name, price, itemIndex, handleRemoveToCart }) => {
   return (
     <Li>
-      <h2>NextJs</h2>
-      <span>R$ 10</span>
-      <button>REMOVER</button>
+      <h2>{name}</h2>
+      <span>R$ {price}</span>
+      <button onClick={() => handleRemoveToCart(itemIndex)}>REMOVER</button>
     </Li>
   );
 };

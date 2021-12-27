@@ -1,13 +1,19 @@
 import CartItems from './CartItems';
 import { Footer } from './style';
 
-const CartCheckout = () => {
+const CartCheckout = ({ cart, handleRemoveToCart }) => {
   return (
     <Footer>
       <ul>
-        <CartItems />
-        <CartItems />
-        <CartItems />
+        {cart.map((item, index) => (
+          <CartItems 
+            key={index}
+            itemIndex={index}
+            name={item.name}
+            price={item.price}
+            handleRemoveToCart={handleRemoveToCart}
+          />
+        ))}
       </ul>
     </Footer>
   );

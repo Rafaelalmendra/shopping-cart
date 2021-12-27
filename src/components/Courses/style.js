@@ -62,11 +62,15 @@ export const Card = styled.div`
   
   img {
     width: 50%;
-    object-fit: cover;
+    height: 50%;
   }
 
   h1 {
     font-size: 1rem;
     margin: 1rem 0;
+  }
+
+  span {
+    margin-bottom: 1rem;
   }
 `

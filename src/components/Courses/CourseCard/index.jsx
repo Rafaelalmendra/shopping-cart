@@ -1,12 +1,13 @@
-import { Card } from '../style'
+import { Card } from '../style';
 
-const CourseCard = () => {
+const CourseCard = ({ id, img, name, price, handleAddToCart }) => {
   return (
-    <Card>
+    <Card key={id}>
       {/* eslint-disable-next-line @next/next/no-img-element*/}
-      <img src="/images/reactjs.svg" alt="" />
-      <h1>Reactjs</h1>
-      <button>ADICIONAR</button>
+      <img src={img} alt="" />
+      <h1>{name}</h1>
+      <span>Preço: R$ {price}</span>
+      <button onClick={() => handleAddToCart(img, name, price)}>ADICIONAR</button>
     </Card>
   );
 };

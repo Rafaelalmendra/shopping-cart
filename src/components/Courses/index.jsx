@@ -1,13 +1,21 @@
 import CourseCard from "./CourseCard";
 import { Main } from './style';
 
-const Courses = () => {
+import { courses } from "../../database";
+
+const Courses = ({ handleAddToCart }) => {
   return (
     <Main>
       <section>
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
+        {courses.map((course) => (
+          <CourseCard 
+            key={course.id}
+            img={course.img}
+            price={course.price}
+            name={course.name}
+            handleAddToCart={handleAddToCart}
+          />
+        ))}
       </section>
     </Main>
   );
